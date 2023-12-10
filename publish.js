@@ -7,7 +7,9 @@ var otherUrls = [
 var foreverUrls = [
     'https://chiphim.com'
 ];
-
+var notices = [
+	'* please bookmark our link(chiphim.github.io)。'
+];
 
 function createFieldElem(option) {
     var title = option.title;
@@ -31,7 +33,7 @@ function createFieldElem(option) {
         if (plainText) {
             htmlStr = htmlStr + '<li>' + items[i] + '</li>';
         } else {
-            htmlStr = htmlStr + '<li><a href="' + items[i] + items[i] + '</a></li>';
+            htmlStr = htmlStr + '<li><a href="' + items[i] + '">' + items[i] + '</a></li>';
         }
     }
 
@@ -51,11 +53,11 @@ window.onload = function () {
     var logoElem = document.createElement('div');
     logoElem.setAttribute('class', 'brand');
     logoElem.setAttribute('id', 'logo');
-    logoElem.innerHTML = '<h1 class="flag">ChiPhim</h1>'
+    logoElem.innerHTML = '<h1 class="flag">chiphim</h1>'
     mainElem.appendChild(logoElem);
 
     // newest urls
-    var newestFieldElem = createFieldElem({title: 'chiphim latest link', items: newestUrls, text: ''});
+    var newestFieldElem = createFieldElem({title: 'chiphim lastest link', items: newestUrls, text: ''});
     mainElem.appendChild(newestFieldElem);
 
     // other urls
