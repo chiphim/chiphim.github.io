@@ -31,7 +31,7 @@ function createFieldElem(option) {
         if (plainText) {
             htmlStr = htmlStr + '<li>' + items[i] + '</li>';
         } else {
-            htmlStr = htmlStr + '<li><a href="' + items[i] + '" target="_blank">' + items[i] + '</a></li>';
+            htmlStr = htmlStr + '<li><a href="' + items[i] + items[i] + '</a></li>';
         }
     }
 
